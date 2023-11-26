@@ -1,0 +1,15 @@
+{
+  "name": "2dmcserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christopher Huntwork",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.9.11",
+    "@grpc/proto-loader": "^0.7.10"
+  }
+}
