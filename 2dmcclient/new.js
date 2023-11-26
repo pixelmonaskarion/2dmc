@@ -15,7 +15,14 @@ var liquids = [];
 var particles = [];
 var zoom = 30;
 var textures = true;
-var blocks = { "grass": { "rgb": { "r": 0, "g": 255, "b": 0 }, "image": "grass", "type": 0, "light": 0 }, "stone": { "rgb": { "r": 100, "g": 100, "b": 100 }, "image": "stone", "type": 0, "light": 0 }, "dirt": { "rgb": { "r": 100, "g": 50, "b": 0 }, "image": "dirt", "type": 0, "light": 0 }, "air": { "rgb": { "r": 255, "g": 255, "b": 255 }, "type": 1, "light": 0 }, "light": { "rgb": { "r": 255, "g": 255, "b": 0 }, "type": 1, "light": 10 } };
+var blocks = { 
+    "grass": { "rgb": { "r": 0, "g": 255, "b": 0 }, "image": "grass", "type": 0, "light": 0 }, 
+    "stone": { "rgb": { "r": 100, "g": 100, "b": 100 }, "image": "stone", "type": 0, "light": 0 }, 
+    "dirt": { "rgb": { "r": 100, "g": 50, "b": 0 }, "image": "dirt", "type": 0, "light": 0 }, 
+    "air": { "rgb": { "r": 255, "g": 255, "b": 255 }, "type": 1, "light": 0 }, 
+    "light": { "rgb": { "r": 255, "g": 255, "b": 0 }, "type": 1, "light": 10 },
+	"wood": { "rgb": { "r": 115, "g": 78, "b": 76 }, "image": "wood", "type": 0, "light": 0 },  
+};
 var loadedImages = {};
 //var grassImg = document.getElementById("grass");
 //var stoneImg = document.getElementById("stone");
@@ -131,7 +138,7 @@ client.getWorld((world) => {
 	lightWorld();
 	var player = { "x": 0, "y": (getTopBlock(0).y - 1) * zoom, "sy": 0, inAir: 10, jumped: false };
 	
-	inventory = [{ "type": "air" }, { "type": "stone" }, { "type": "dirt" }, { "type": "grass" }, { "type": "light" }];
+	inventory = [{ "type": "air" }, { "type": "stone" }, { "type": "dirt" }, { "type": "grass" }, { "type": "light" }, { "type": "wood" }];
 	var speed = 0.2;
 	var scrollX = player.x;
 	var scrollY = player.y;
