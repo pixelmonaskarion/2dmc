@@ -24,7 +24,7 @@ function connect(playerMoved, blockChanged) {
         });
     var mcgame = grpc.loadPackageDefinition(packageDefinition);
     console.log(mcgame);
-    stub = new mcgame.McGame("10.0.7.216:50051", grpc.credentials.createInsecure());
+    stub = new mcgame.McGame("chrissytopher.com:50051", grpc.credentials.createInsecure());
     let player_id = randomUUID();
     let player = { uuid: player_id }
     var call = stub.events(player);
